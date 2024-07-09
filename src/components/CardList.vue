@@ -1,12 +1,21 @@
 <script>
 import SingleCard from './SingleCard.vue';
+// import dello store
+import {store} from '../store';
+
 
 export default {
     name: "CharactersList",
     components: {
         SingleCard
-    }
+    },
+    data () {
+        return {
+            store,
+        }
+    },
 }
+
 </script>
 
 <template>
@@ -16,7 +25,7 @@ export default {
                 Found 39 Cards
             </div>
             <div class="row">
-                <SingleCard />
+                <SingleCard v-for="card in store.cardsList" :key="card.id" :info="card"/>
             </div>
         </div>
     </section>

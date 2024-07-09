@@ -24,6 +24,7 @@ export default {
             axios.get(store.apiURL)
             .then (res => {
                 console.log(res.data.data);
+                store.cardsList = res.data.data;
             })
             .catch(err => {
                 console.log(err);

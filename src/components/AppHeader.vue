@@ -41,9 +41,7 @@ export default {
             margin-right: 20px;
 
             img {
-                width: 100%;
                 aspect-ratio: 1/0,5;
-                object-fit: cover;
             }
         }
 
