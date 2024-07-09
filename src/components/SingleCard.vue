@@ -15,11 +15,15 @@ export default {
 </template>
 
 <style scoped lang="scss">
+
+@use '../style/partials/variables' as *;
+
     .card {
         width: calc((100% / 5) - 20px);
         text-align: center;
-        background-color: #d48f38;
+        background-color: $main-bg-color;
         padding-bottom: 20px;
+        margin-bottom: 25px;
 
         .img {
             width: 100%;
