@@ -1,8 +1,8 @@
-// inclusione font
-@import '@fontsource-variable/montserrat';
-
 // inclusione variabili
 @use './partials/variables' as *;
+
+// inclusione font
+@import '@fontsource/roboto';
 
 * {
     margin: 0;

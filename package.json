@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource-variable/montserrat": "^5.0.19",
+    "@fontsource/roboto": "^5.0.13",
     "vue": "^3.4.29"
   },
   "devDependencies": {
