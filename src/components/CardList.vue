@@ -1,6 +1,11 @@
 <script>
+import SingleCard from './SingleCard.vue';
+
 export default {
     name: "CharactersList",
+    components: {
+        SingleCard
+    }
 }
 </script>
 
@@ -11,7 +16,7 @@ export default {
                 Found 39 Cards
             </div>
             <div class="row">
-
+                <SingleCard />
             </div>
         </div>
     </section>
@@ -24,23 +29,25 @@ section {
 
     .container {
         background-color: #fff;
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
         padding-top: 50px;
         // debug
         min-height: 800px;
 
-        div {
+        .found {
             width: 90%;
             margin: 0 auto;
-        }
-
-        .found {
             padding: 20px;
             background-color: #212529;
             color: #fff;
             font-size: 18px;
             font-weight: bolder;
+        }
+
+        .row {
+            width: 90%;
+            margin: 0 auto;
         }
     }
 

@@ -1,6 +1,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
-import CharactersList from './components/CharactersList.vue';
+import CharactersList from './components/CardList.vue';
 
 export default {
     name: 'App',
