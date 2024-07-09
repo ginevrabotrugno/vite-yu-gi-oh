@@ -18,6 +18,20 @@ export default {
         return {
             store,
         }
+    },
+    methods: {
+        getCard () {
+            axios.get(store.apiURL)
+            .then (res => {
+                console.log(res.data.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        }
+    },
+    created(){
+        this.getCard();
     }
 }
 </script>
