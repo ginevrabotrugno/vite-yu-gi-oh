@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import AppHeader from './components/AppHeader.vue';
 import CharactersList from './components/CardList.vue';
+import AppSelect from './components/AppSelect.vue';
 
 // import dello store
 import {store} from './store';
@@ -13,6 +14,7 @@ export default {
     components: {
         AppHeader,
         CharactersList,
+        AppSelect,
     },
     data () {
         return {
@@ -40,6 +42,7 @@ export default {
 <template>
     <AppHeader />
     <main>
+        <AppSelect />
         <CharactersList />
     </main>
 </template>
