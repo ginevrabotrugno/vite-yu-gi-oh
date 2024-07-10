@@ -42,7 +42,7 @@ export default {
 <template>
     <AppHeader />
     <main>
-        <AppSelect />
+        <AppSelect @selectArchetype="getCard"/>
         <CharactersList />
     </main>
 </template>
