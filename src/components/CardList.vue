@@ -34,15 +34,10 @@ export default {
 <style scoped lang="scss">
 
 section {
-    padding: 50px 0;
 
     .container {
         background-color: #fff;
-        width: 85%;
-        margin: 0 auto;
         padding-top: 50px;
-        // debug
-        min-height: 800px;
 
         .found {
             width: 90%;
