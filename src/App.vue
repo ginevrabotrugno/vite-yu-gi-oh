@@ -5,6 +5,8 @@ import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import CharactersList from './components/CardList.vue';
 import AppSelect from './components/AppSelect.vue';
+import ResultCounter from './components/ResultCounter.vue';
+
 
 // import dello store
 import {store} from './store';
@@ -15,6 +17,7 @@ export default {
         AppHeader,
         CharactersList,
         AppSelect,
+        ResultCounter,
     },
     data () {
         return {
@@ -50,6 +53,7 @@ export default {
     <AppHeader />
     <main>
         <AppSelect @selectArchetype="getCard"/>
+        <ResultCounter />
         <CharactersList />
     </main>
 </template>

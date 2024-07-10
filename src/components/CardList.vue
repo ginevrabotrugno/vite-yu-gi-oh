@@ -21,9 +21,6 @@ export default {
 <template>
     <section>
         <div class="container">
-            <div class="found">
-                Found 39 Cards
-            </div>
             <div class="row">
                 <SingleCard v-for="card in store.cardsList" :key="card.id" :info="card"/>
             </div>
@@ -37,17 +34,6 @@ section {
 
     .container {
         background-color: #fff;
-        padding-top: 50px;
-
-        .found {
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #212529;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bolder;
-        }
 
         .row {
             width: 90%;
