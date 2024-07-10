@@ -33,6 +33,7 @@ export default {
 <template>
     <div class="container">
         <select v-model="store.searchArchetype" @change="$emit('selectArchetype')">
+            <option value="" disabled selected>Select Archetype</option>
             <option v-for="(archetype, i) in store.archetypesList" :key="i" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
         </select>
     </div>
