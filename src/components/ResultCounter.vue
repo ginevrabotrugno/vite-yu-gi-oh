@@ -18,12 +18,15 @@ export default {
 
 <template>
     <div class="found">
-        Found {{resultNumber}} Cards
+        Found <span>{{resultNumber}}</span> Cards
     </div>
 
 </template>
 
 <style scoped lang="scss">
+@use '../style/partials/variables' as *;
+
+
 .found {
     width: 80%;
     margin: 0 auto;
@@ -32,6 +35,13 @@ export default {
     color: #fff;
     font-size: 18px;
     font-weight: bolder;
+
+    span {
+        font-size: 20px;
+        padding: 8px;
+        background-color: $main-bg-color;
+        border-radius: 50%;
+    }
 }
 
 </style>
