@@ -23,7 +23,14 @@ export default {
     },
     methods: {
         getCard () {
-            axios.get(store.apiURL)
+            let endpoint = store.apiURL;
+
+            if (store.searchArchetype !== "") {
+                endpoint += `&${store.apiArchetypeParam}=${store.searchArchetype}`
+                console.log(endpoint);
+            }
+
+            axios.get(endpoint)
             .then (res => {
                 console.log(res.data.data);
                 store.cardsList = res.data.data;
