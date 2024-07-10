@@ -1,12 +1,24 @@
 <script>
+import { store } from '../store';
+
 export default {
-    name: "ResultCounter"
+    name: "ResultCounter",
+    data () {
+        return {
+            store,
+        }
+    },
+    computed: {
+        resultNumber() {
+            return store.cardsList.length;
+        }
+    }
 }
 </script>
 
 <template>
     <div class="found">
-        Found 39 Cards
+        Found {{resultNumber}} Cards
     </div>
 
 </template>
