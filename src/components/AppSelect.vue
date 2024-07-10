@@ -1,15 +1,39 @@
 <script>
+// import di axios
+import axios from 'axios';
+// import dello store
+import { store } from "../store";
+
 export default {
-    name: 'AppSelect'
+    name: 'AppSelect',
+    data() {
+        return {
+            store,
+        }
+    },
+    methods: {
+        getArchetype(){
+            axios.get(store.apiEndpoint)
+            .then(res => {
+                console.log(res.data);
+                store.archetypesList = res.data;
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        }
+    },
+    created(){
+        this.getArchetype();
+    }
+
 }
 </script>
 
 <template>
     <div class="container">
         <select name="sel">
-            <option value="1">Option</option>
-            <option value="2">Option</option>
-            <option value="3">Option</option>
+            <option v-for="(archetype, i) in store.archetypesList" :key="i" :value="store.archetypesList[i]">{{ archetype.archetype_name }}</option>
         </select>
     </div>
 
