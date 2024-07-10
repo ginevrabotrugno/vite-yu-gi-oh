@@ -12,7 +12,7 @@ export default {
             <img :src="info.card_images[0].image_url" :alt="info.name">        </div>
         <h3>{{info.name}}</h3>
         <span v-if="info.archetype">{{info.archetype}}</span>
-        <span v-else>Alien</span>
+        <span v-else>Unknown Archetype</span>
     </div>
 </template>
 
